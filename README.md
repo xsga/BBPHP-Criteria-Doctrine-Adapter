@@ -1,0 +1,1 @@
+# BBPHP-Criteria-Doctrine-Adapter
