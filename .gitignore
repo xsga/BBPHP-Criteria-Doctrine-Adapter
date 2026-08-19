@@ -5,6 +5,10 @@
 */.env
 */.dev.env
 */.pro.env
+.env
+.env.local
+.dev.env
+.pro.env
 .phpunit.result.cache
 .phpunit.report
 /.phpunit.cache
