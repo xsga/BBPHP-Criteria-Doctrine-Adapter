@@ -1,0 +1,65 @@
+{
+  "name": "xsga/bbphp-criteria-doctrine-adapter",
+  "description": "A PHP criteria core library",
+  "type": "project",
+  "license": "MIT",
+  "homepage": "https://github.com/xsga/BBPHP-Criteria-Doctrine-Adapter",
+  "keywords": [
+    "php",
+    "criteria",
+    "doctrine",
+    "adapter"
+  ],
+  "authors": [
+    {
+      "name": "Parker",
+      "email": "parker@xsga.es"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/xsga/BBPHP-Criteria-Core.git",
+      "no-api": true
+    }
+  ],
+  "require": {
+    "php": "^8.4",
+    "doctrine/collections": "^2.3",
+    "xsga/bbphp-criteria-core": "dev-master"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^4.0",
+    "vimeo/psalm": "^6.14",
+    "phpmd/phpmd" : "^2.15",
+    "php-parallel-lint/php-parallel-lint": "^1.4",
+    "php-parallel-lint/php-console-highlighter": "^1.0"
+  },
+  "autoload": {
+    "files": [
+    ],
+    "psr-4": {
+      "Xsga\\BBPHP\\Criteria\\Adapter\\Doctrine\\": "Src/Xsga/BBPHP-Criteria-Doctrine-Adapter/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+
+    }
+  },
+  "scripts": {
+    "lint": "parallel-lint --exclude vendor .",
+    "style": "phpcs -p --colors --standard=PSR12 Src",
+    "style-fix": "phpcbf -p --standard=PSR12 Src",
+    "analyze-errors": "psalm --output-format=console --show-info=false --no-cache",
+    "analyze-info": "psalm --output-format=console --show-info=true --no-cache",
+    "analyze-md": "phpmd Bin,Config,Public,Src ansi cleancode,codesize,controversial,design,naming,unusedcode",
+    "phploc": "phploc Src"
+  },
+  "config": {
+    "allow-plugins": {
+      "php-http/discovery": false,
+      "tbachert/spi": true
+    }
+  }
+}
