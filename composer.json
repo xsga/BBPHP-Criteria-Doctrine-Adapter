@@ -16,17 +16,10 @@
       "email": "parker@xsga.es"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/xsga/BBPHP-Criteria-Core.git",
-      "no-api": true
-    }
-  ],
   "require": {
     "php": "^8.4",
     "doctrine/collections": "^2.3",
-    "xsga/bbphp-criteria-core": "dev-master"
+    "xsga/bbphp-criteria-core": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^4.0",
